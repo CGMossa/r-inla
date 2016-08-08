@@ -6471,6 +6471,8 @@ inla.models()
 				 }
 				\item{Model `exponential'.}{Number of hyperparmeters are 0.
 				 }
+				\item{Model `exponentialsurv'.}{Number of hyperparmeters are 0.
+				 }
 				\item{Model `coxph'.}{Number of hyperparmeters are 0.
 				 }
 				\item{Model `weibull'.}{Number of hyperparmeters are 1.
@@ -6478,6 +6480,33 @@ inla.models()
 						\item{Hyperparameter `theta'}{
 							 \describe{
 							\item{hyperid = }{`79001'}
+							\item{name = }{`log alpha'}
+							\item{short.name = }{`alpha'}
+							\item{initial = }{`0'}
+							\item{fixed = }{`FALSE'}
+							\item{prior = }{`loggamma'}
+							\item{param = }{`25 25'}
+							\item{to.theta = }{`\code{function(x) log(x)}'}
+							\item{from.theta = }{`\code{function(x) exp(x)}'}
+							}
+						}
+					 }
+					 \describe{
+						\item{Properties:}{
+							\describe{
+								\item{survival = }{`FALSE'}
+								\item{discrete = }{`FALSE'}
+								\item{link = }{`default log'}
+								\item{pdf = }{`weibull'}
+							 }
+						 }
+					 }
+				 }
+				\item{Model `weibullsurv'.}{Number of hyperparmeters are 1.
+					 \describe{
+						\item{Hyperparameter `theta'}{
+							 \describe{
+							\item{hyperid = }{`79101'}
 							\item{name = }{`log alpha'}
 							\item{short.name = }{`alpha'}
 							\item{initial = }{`0'}

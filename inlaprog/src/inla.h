@@ -424,7 +424,9 @@ typedef enum {
 	L_STOCHVOL_NIG,
 	L_LOGPERIODOGRAM,
 	L_EXPONENTIAL,
+	L_EXPONENTIALSURV,
 	L_WEIBULL,
+	L_WEIBULLSURV,
 	L_LOGLOGISTIC,
 	L_LOGNORMAL,
 	L_LOGNORMALSURV,
@@ -1550,6 +1552,7 @@ int loglikelihood_cbinomial(double *logll, double *x, int m, int idx, double *x_
 int loglikelihood_cenpoisson(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
 int loglikelihood_circular_normal(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
 int loglikelihood_exp(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
+int loglikelihood_expsurv(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
 int loglikelihood_gammacount(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
 int loglikelihood_gaussian(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
 int loglikelihood_gev(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
@@ -1577,6 +1580,7 @@ int loglikelihood_t(double *logll, double *x, int m, int idx, double *x_vec, voi
 int loglikelihood_test_binomial_1(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
 int loglikelihood_tstrata(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
 int loglikelihood_weibull(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
+int loglikelihood_weibullsurv(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
 int loglikelihood_weibull_cure(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
 int loglikelihood_wrapped_cauchy(double *logll, double *x, int m, int idx, double *x_vec, void *arg);
 int loglikelihood_zero_n_inflated_binomial2(double *logll, double *x, int m, int idx, double *x_vec, void *arg);

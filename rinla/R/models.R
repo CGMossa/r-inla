@@ -5389,6 +5389,15 @@
                  exponential = list(
                      hyper = list(
                          ),
+                     survival = FALSE,
+                     discrete = FALSE,
+                     link = c("default", "log"),
+                     pdf = "exponential"
+                     ),
+
+                 exponentialsurv = list(
+                     hyper = list(
+                         ),
                      survival = TRUE,
                      discrete = FALSE,
                      link = c("default", "log"),
@@ -5408,6 +5417,26 @@
                      hyper = list(
                          theta = list(
                              hyperid =  79001,
+                             name = "log alpha",
+                             short.name = "alpha",
+                             initial = 0,
+                             fixed = FALSE,
+                             prior = "loggamma",
+                             param = c(25, 25),
+                             to.theta = function(x) log(x),
+                             from.theta = function(x) exp(x)
+                             )
+                         ),
+                     survival = FALSE,
+                     discrete = FALSE,
+                     link = c("default", "log"),
+                     pdf = "weibull"
+                     ),
+
+                 weibullsurv = list(
+                     hyper = list(
+                         theta = list(
+                             hyperid =  79101,
                              name = "log alpha",
                              short.name = "alpha",
                              initial = 0,
