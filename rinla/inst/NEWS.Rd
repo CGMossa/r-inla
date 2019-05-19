@@ -29,6 +29,87 @@
   }
 }
 
+\section{CHANGES IN VERSION 19.05.17}{
+  \subsection{USER-VISIBLE CHANGES}{
+    \itemize{
+      \item The internal parameterisation of the alpha-parameter for the
+  Weibull likelihood familes, has been redefined/scaled, to fix some
+  optimisation issues. This means that the default prior has changed (a
+  little) and user-defined priors has to change to account for this new
+  internal parameterisation (sorry about that). See the documentation
+  for details.
+    }
+  }
+}
+
+\section{CHANGES IN VERSION 19.05.16}{
+  \subsection{NEW FEATURES}{
+    \itemize{
+      \item Option \code{short.summary} will use a version of
+      \code{summary} with less output, maybe more suitable for
+      Markdown documents. 
+    }
+  }
+}
+
+\section{CHANGES IN VERSION 19.05.13}{
+  \subsection{NEW EXPERIMENTAL FEATURES}{
+    \itemize{
+      \item Added exampledata directory for various example datasets
+    }
+  }
+  \subsection{BUG FIXES}{
+    \itemize{
+      \item Code cleanup and improved some input-error checking.
+    }
+  }
+}
+
+\section{CHANGES IN VERSION 19.04.16}{
+  \subsection{BUG FIXES}{
+    \itemize{
+      \item Fixed an error in the cache-system for
+      \code{model="rgeneric"} and \code{model="dmatern"}.
+      Most notably with option \code{openmp.strategy="pardiso.parallel"}.
+    }
+  }
+}
+
+\section{CHANGES IN VERSION 19.04.14}{
+  \subsection{BUG FIXES}{
+    \itemize{
+      \item Removed the weight correction for the computation of the cpo
+            for \code{int.design="user.expert"}
+    }
+  }
+}
+
+\section{CHANGES IN VERSION 19.04.09}{
+  \subsection{NEW EXPERIMENTAL FEATURES}{
+    \itemize{
+      \item Option \code{int.strategy="user.expert"}, see the vignette
+      about user-defined integration points.
+      \item Merge also \code{cpo} and \code{po} results in \code{inla.merge()}
+    }
+  }
+}
+
+\section{CHANGES IN VERSION 19.04.01}{
+  \subsection{BUG FIXES}{
+    \itemize{
+      \item Fixed an issue with AR-model and group
+    }
+  }
+}
+
+\section{CHANGES IN VERSION 19.03.16}{
+  \subsection{BUG FIXES}{
+    \itemize{
+      \item Small fix in model \code{dmatern}
+    }
+  }
+}
+
 
 \section{CHANGES IN VERSION 19.03.04}{
   \subsection{BUG FIXES}{
